@@ -46,6 +46,13 @@ export class ChangeLog extends Component {
                         <td>Added 3 new components to the provided Nav Bar <br/> Kept Home and Fetch data for reference </td>
                         <td></td>
                     </tr>
+                    <tr>
+                        <td>0.2</td>
+                            <td>Spent the entire day attempting to make and connect an SQL server in the manner it would be in an enterprise scale environment. <br />
+                                Incredibly Difficult. Feels like i've been pounding a square peg into a round hole for the entire day. Atleast I've realised. <br />
+                                In hindsight, I've found out two 'wrong' approaches. Now to find a 'right' one.</td>
+                        <td>04/10/2023</td>
+                    </tr>
 
                     </tbody>
 
