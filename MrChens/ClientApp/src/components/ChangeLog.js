@@ -56,8 +56,8 @@ export class ChangeLog extends Component {
                     <tr>
                         <td>0.3</td>
                             <td>Followed along with:  
-                                <a href="https://learn.microsoft.com/en-us/troubleshoot/developer/visualstudio/csharp/language-compilers/create-sql-server-database-programmatically" target="_blank"> 
-                             Microsoft's Create SQL Server Database Programatically</a><br />
+                                <a href="https://learn.microsoft.com/en-us/ef/ef6/modeling/code-first/workflows/new-database" target="_blank"> 
+                             Microsoft's Code First to a New Database</a><br />
                                 Added 3 new Data models, 1 database context and 3 migrations <br />
                                 Now to add an API so the web app can communicate with the Database</td>
                         <td>05/01/2023</td>
