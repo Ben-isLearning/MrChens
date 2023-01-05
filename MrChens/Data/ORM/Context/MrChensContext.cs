@@ -6,10 +6,10 @@ namespace MrChens.Data.ORM.Context
 {
     public class MrChensContext : DbContext
 {
-    public DbSet<Blog> Blogs { get; set; }
-    public DbSet<Post> Posts { get; set; }
-    public DbSet<User> Users { get; set; }
-    public DbSet<Guest> Guests { get; set; }
+    public DbSet<Finance> Finances { get; set; }
+    public DbSet<Dish> Dishes { get; set; }
+    public DbSet<Ingredient> Ingredients { get; set; }
+    public DbSet<Customer> Customers { get; set; }
     }
 
 }
