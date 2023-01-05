@@ -18,7 +18,7 @@ export class ChangeLog extends Component {
     render() {
         return (
             <div>
-                <h1>Change Log ~ Version: 0.3 </h1>
+                <h1>Change Log ~ Version: 0.4 </h1>
                 <br></br>
                 <p>This change log follows the journey of "Mr Chen" as he stumbles into the buisness of running a Ramen shop. <br/>
                 I will be commenting the process of implementing "Mr Chen's" wacky ideas and buisness improvements. </p>
@@ -51,7 +51,7 @@ export class ChangeLog extends Component {
                             <td>Spent the entire day attempting to make and connect an SQL server in the manner it would be in an enterprise scale environment. <br />
                                 Incredibly Difficult. Feels like i've been pounding a square peg into a round hole for the entire day. Atleast I've realised. <br />
                                 In hindsight, I've found out two 'wrong' approaches. Now to find a 'right' one.</td>
-                    <td>04/01/2023</td>
+                        <td>04/01/2023</td>
                     </tr>
                     <tr>
                         <td>0.3</td>
@@ -61,6 +61,11 @@ export class ChangeLog extends Component {
                                 Added 3 new Data models, 1 database context and 3 migrations <br />
                                 Now to add an API so the web app can communicate with the Database</td>
                         <td>05/01/2023</td>
+                    </tr>
+                    <tr>
+                        <td>0.4</td>
+                        <td>Added SwaggerUI Into React project </td>
+                        <td></td>
                     </tr>
 
 
