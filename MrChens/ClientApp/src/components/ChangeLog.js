@@ -56,7 +56,7 @@ export class ChangeLog extends Component {
                     <tr>
                         <td>0.3</td>
                             <td>Followed along with:  
-                                <a href="https://learn.microsoft.com/en-us/ef/ef6/modeling/code-first/workflows/new-database" target="_blank"> 
+                                <a rel="noreferrer"  href="https://learn.microsoft.com/en-us/ef/ef6/modeling/code-first/workflows/new-database" target="_blank"> 
                              Microsoft's Code First to a New Database</a><br />
                                 Added 3 new Data models, 1 database context and 3 migrations <br />
                                 Now to add an API so the web app can communicate with the Database</td>
@@ -70,7 +70,7 @@ export class ChangeLog extends Component {
                     <tr>
                         <td>0.5</td>
                             <td>Set up database with desired tables, rather than the tables setup when following
-                                <a href="https://learn.microsoft.com/en-us/ef/ef6/modeling/code-first/workflows/new-database" target="_blank">This</a> tutorial <br />
+                                <a rel="noreferrer" href="https://learn.microsoft.com/en-us/ef/ef6/modeling/code-first/workflows/new-database" target="_blank">This</a> tutorial <br />
                                 Ran into an error, using Add-Migration and Update-Database, Deleted the branch and tried again, <br />
                                 Re-attempted and ran into a persistant error: Cannot drop 'ThisTable' because it doesn't exist... <br />
                                 Ended up Downloading Microsoft SQL Server Management Studio to manually override the Migration.cs file that <br /> 
@@ -84,8 +84,14 @@ export class ChangeLog extends Component {
                         <td>0.6</td>
                         <td>Added back-end API Structure; Front End -> Controller -> Handler -> Repository -> Database Structure <br />
                             React App -> CustomerController.cs -> ICustomerHandler.cs ->  ICustomerRepository.cs -> IMrChensContext.cs  <br />
-                                                        </td>
-
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>0.7</td>
+                        <td>Added Single API Call <br />
+                        Create; Able to Add a record to the Customers Table.  <br />
+                        </td>
                         <td></td>
                     </tr>
 
