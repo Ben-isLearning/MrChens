@@ -67,7 +67,27 @@ export class ChangeLog extends Component {
                         <td>Added SwaggerUI Into React project </td>
                         <td></td>
                     </tr>
+                    <tr>
+                        <td>0.5</td>
+                            <td>Set up database with desired tables, rather than the tables setup when following
+                                <a href="https://learn.microsoft.com/en-us/ef/ef6/modeling/code-first/workflows/new-database" target="_blank">This</a> tutorial <br />
+                                Ran into an error, using Add-Migration and Update-Database, Deleted the branch and tried again, <br />
+                                Re-attempted and ran into a persistant error: Cannot drop 'ThisTable' because it doesn't exist... <br />
+                                Ended up Downloading Microsoft SQL Server Management Studio to manually override the Migration.cs file that <br /> 
+                                was lingering through the branch deletion. <br />
+                                After fixing that, Re-named Tables and their Models, and their Variables. <br />
+                                Database Looks functional, and all before lunch, Woo. 
+                            </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>0.6</td>
+                        <td>Added back-end API Structure; Front End -> Controller -> Handler -> Repository -> Database Structure <br />
+                            React App -> CustomerController.cs -> ICustomerHandler.cs ->  ICustomerRepository.cs -> IMrChensContext.cs  <br />
+                                                        </td>
 
+                        <td></td>
+                    </tr>
 
                         
 
