@@ -1,8 +1,14 @@
+using MrChens.Data.ORM.Context;
+using MrChens.Data.Repositories;
+using MrChens.Handlers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<ICustomerHandler, CustomerHandler>();
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+builder.Services.AddScoped<IMrChensContext, MrChensContext>();
 
 // Add Swagger Gen
 builder.Services.AddEndpointsApiExplorer();

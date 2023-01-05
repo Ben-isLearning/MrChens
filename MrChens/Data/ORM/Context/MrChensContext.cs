@@ -4,7 +4,7 @@ using System.Data.Entity;
 
 namespace MrChens.Data.ORM.Context
 {
-    public class MrChensContext : DbContext
+    public class MrChensContext : DbContext, IMrChensContext
 {
     public DbSet<Finance> Finances { get; set; }
     public DbSet<Dish> Dishes { get; set; }
