@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 namespace MrChens.Data.Models
 {
-    public class Guest
+    public class Customer
     {
         [Key]
         public int GuestId { get; set; }
