@@ -18,7 +18,7 @@ export class ChangeLog extends Component {
     render() {
         return (
             <div>
-                <h1>Change Log ~ Version: 0.11 </h1>
+                <h1>Change Log ~ Version: 0.12 </h1>
                 <br></br>
                 <p>This change log follows the journey of "Mr Chen" as he stumbles into the buisness of running a Ramen shop. <br />
                     I will be commenting the process of implementing "Mr Chen's" wacky ideas and buisness improvements. </p>
@@ -128,6 +128,27 @@ export class ChangeLog extends Component {
                                 Update; Able to Update(Or Add) a single record of the Customers Table (If it doesn't exist).  <br />
                                 Route: localhost:44471/Customer/UpdateCustomer <br />
 
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>0.12</td>
+                            <td>Added API Stack For Ingedients Table <br />
+                                Repository - Handler - Controller - FrontEnd<br />
+                                Context.cs implements DbContext, Context.cs implements IContext.cs <br/> 
+                                Repository.cs uses a private version of IContext.cs <br/>
+                                Repository.cs Implements IRepoitory.cs <br />
+                                Handler.cs uses a private version of IRepository.cs <br/>
+                                Handler.cs implements IHandler.cs <br />
+                                Controller.cs uses a private version of IHandler.cs <br />
+                                Controller.cs Implmenets IController.cs <br></br>
+                                <br></br> 
+                                This approach ensures we implement SOLID practices <br></br>
+                                S - Each class only does one thing, ex, Repository.cs only interacts with our Database. <br></br>
+                                O - We added functionality by adding more classes, we did not touch existing classes. <br></br>
+                                L - Controller inherits from BaseController and extends functionality. <br></br>
+                                I - Interfaces Segregate classes from eachother. <br></br>  
+                                D - Each Class only depends on a interface, rather than a class. <br></br>
                             </td>
                             <td></td>
                         </tr>
