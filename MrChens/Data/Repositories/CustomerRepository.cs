@@ -1,4 +1,6 @@
-﻿using MrChens.Data.ORM.Context;
+﻿using MrChens.Data.Models;
+using MrChens.Data.ORM.Context;
+using MrChens.Data.Repositories.Converters;
 using MrChens.Handlers.Models;
 
 namespace MrChens.Data.Repositories
@@ -12,49 +14,37 @@ namespace MrChens.Data.Repositories
             _MrChensContext = mrChensContext;
         }
 
-        public void Add(Customer customer)
+        public void Add(Handlers.Models.Customer customer)
         {
-            var dbCustomer = new Data.Models.Customer()
-            {
-                CustomerId = customer.CustomerId,
-                Name = customer.Name,
-                LikesDishId = customer.LikesDishId,
-                DislikesDishId = customer.DislikesDishId,
-            };
+            var dbCustomer = CustomerConverter.Convert(customer);
 
             _MrChensContext.Customers.Add(dbCustomer);
             _MrChensContext.SaveChanges();
 
         }
-        public Customer GetById(int Id)
+        public Handlers.Models.Customer GetById(int Id)
         {
             //FirstOrDefault loops through all entries in Table - Finds First Entry that matches or the Default Entry that matches 
             var dbCustomer = _MrChensContext.Customers.FirstOrDefault(x => x.CustomerId == Id);
 
             if (dbCustomer != null)
             {
-                var customer = new Handlers.Models.Customer()
-                {
-                    CustomerId = dbCustomer.CustomerId,
-                    Name = dbCustomer.Name,
-                    LikesDishId = dbCustomer.LikesDishId,
-                    DislikesDishId = dbCustomer.DislikesDishId,
-                };
+                var customer = CustomerConverter.Convert(dbCustomer);
 
                 return customer;
 
             }
-            return new Customer();
+            return new Handlers.Models.Customer();
         }
-        public IEnumerable<Customer> GetAll()
+        public IEnumerable<Handlers.Models.Customer> GetAll()
         {
             var dbCustomerList = _MrChensContext.Customers.ToList();
 
-            var customerList = new List<Customer>();
+            var customerList = new List<Handlers.Models.Customer>();
 
             foreach (var dbCustomer in dbCustomerList)
             {
-                var customer = new Customer()
+                var customer = new Handlers.Models.Customer()
                 {
                     CustomerId = dbCustomer.CustomerId,
                     Name = dbCustomer.Name,
@@ -77,10 +67,10 @@ namespace MrChens.Data.Repositories
             _MrChensContext.SaveChanges();
         }
 
-
-
-        public void Update(Customer customer)
+        public void Update(Handlers.Models.Customer customer)
         {
+            var dbCustomer = CustomerConverter.Convert(customer);
+
             throw new NotImplementedException();
         }
     }
