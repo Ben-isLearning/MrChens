@@ -6,8 +6,8 @@ namespace MrChens.Handlers
     {
         public void Add(Customer customer);
         public Customer GetById(int id);
-        public IEnumerable<Customer> GetAll();  
-
+        public IEnumerable<Customer> GetAll();
+        public void Delete(int id);
         public int addTwo(int input);
 
     }

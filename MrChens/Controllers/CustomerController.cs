@@ -26,7 +26,7 @@ namespace MrChens.Controllers
         public string AddCustomer(Customer customer)
         {
             _CustomerHandler.Add(customer);
-            return "Hello I Work";
+            return "Customer Added";
         }
 
         [HttpGet]
@@ -43,6 +43,14 @@ namespace MrChens.Controllers
         {
             var result = _CustomerHandler.GetAll();
             return result;
+        }
+
+        [HttpDelete]
+        [Route("DeleteCustomer/{id}")]
+        public string DeleteCustomer(int id)
+        {
+            _CustomerHandler.Delete(id);
+            return "Customer Deleted";
         }
     }
 }

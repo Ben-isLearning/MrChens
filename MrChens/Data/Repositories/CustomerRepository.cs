@@ -33,7 +33,6 @@ namespace MrChens.Data.Repositories
 
             if (dbCustomer != null)
             {
-
                 var customer = new Handlers.Models.Customer()
                 {
                     CustomerId = dbCustomer.CustomerId,
@@ -70,22 +69,12 @@ namespace MrChens.Data.Repositories
             //throw new NotImplementedException();
         }
 
-        public void Delete(int Id)
+
+        public void Delete(int id)
         {
-            var customer = GetById(Id);
-
-            if (customer.CustomerId != 0)
-            {
-                var dbCustomer = new Data.Models.Customer()
-                {
-                    CustomerId = customer.CustomerId,
-                    Name = customer.Name,
-                    LikesDishId = customer.LikesDishId,
-                    DislikesDishId = customer.DislikesDishId,
-                };
-                _MrChensContext.Customers.Remove(dbCustomer);
-            }
-
+            var customer = _MrChensContext.Customers.Single(c=>c.CustomerId==id);
+            _MrChensContext.Customers.Remove(customer);
+            _MrChensContext.SaveChanges();
         }
 
 
