@@ -22,6 +22,7 @@ namespace MrChens.Controllers
 
 
         [HttpPost]
+        [Route("AddCustomer")]
         public string AddCustomer(Customer customer)
         {
             _CustomerHandler.Add(customer);
@@ -29,6 +30,7 @@ namespace MrChens.Controllers
         }
 
         [HttpGet]
+        [Route("GetCustomerById/{id}")]
         public Customer GetCustomerById(int id)
         {
             var result = _CustomerHandler.GetById(id);
