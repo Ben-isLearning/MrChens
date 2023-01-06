@@ -134,7 +134,7 @@ export class ChangeLog extends Component {
                         <tr>
                             <td>0.12</td>
                             <td>Added API Stack For Ingedients Table <br />
-                                Repository - Handler - Controller - FrontEnd<br />
+                                Context - Repository - Handler - Controller - FrontEnd<br />
                                 Context.cs implements DbContext, Context.cs implements IContext.cs <br/> 
                                 Repository.cs uses a private version of IContext.cs <br/>
                                 Repository.cs Implements IRepoitory.cs <br />
