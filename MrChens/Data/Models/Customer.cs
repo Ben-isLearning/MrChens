@@ -5,7 +5,6 @@ namespace MrChens.Data.Models
     {
         [Key]
         public int CustomerId { get; set; }
-
         public string Name { get; set; }
         public int LikesDishId { get; set; }
         public int DislikesDishId { get; set; }
