@@ -82,8 +82,8 @@ export class ChangeLog extends Component {
                     </tr>
                     <tr>
                         <td>0.6</td>
-                        <td>Added back-end API Structure; Front End -> Controller -> Handler -> Repository -> Database Structure <br />
-                            React App -> CustomerController.cs -> ICustomerHandler.cs ->  ICustomerRepository.cs -> IMrChensContext.cs  <br />
+                        <td>Added back-end API Structure; Front End - Controller - Handler - Repository - Database Structure <br />
+                            React App - CustomerController.cs - ICustomerHandler.cs -  ICustomerRepository.cs - IMrChensContext.cs  <br />
                         </td>
                         <td></td>
                     </tr>
@@ -93,9 +93,7 @@ export class ChangeLog extends Component {
                         Create; Able to Add a record to the Customers Table.  <br />
                         </td>
                         <td></td>
-                    </tr>
-
-                        
+                    </tr>                       
 
                     </tbody>
 
