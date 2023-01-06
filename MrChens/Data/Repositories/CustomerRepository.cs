@@ -2,6 +2,7 @@
 using MrChens.Data.ORM.Context;
 using MrChens.Data.Repositories.Converters;
 using MrChens.Handlers.Models;
+using System.Data.Entity.Migrations;
 
 namespace MrChens.Data.Repositories
 {
@@ -70,8 +71,9 @@ namespace MrChens.Data.Repositories
         public void Update(Handlers.Models.Customer customer)
         {
             var dbCustomer = CustomerConverter.Convert(customer);
+            _MrChensContext.Customers.AddOrUpdate(dbCustomer);
+            _MrChensContext.SaveChanges();
 
-            throw new NotImplementedException();
         }
     }
 }

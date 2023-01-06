@@ -8,6 +8,7 @@ namespace MrChens.Handlers
         public Customer GetById(int id);
         public IEnumerable<Customer> GetAll();
         public void Delete(int id);
+        public void Update(Customer customer);
         public int addTwo(int input);
 
     }

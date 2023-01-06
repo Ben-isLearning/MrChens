@@ -34,6 +34,11 @@ namespace MrChens.Handlers
            _CustomerRepository.Delete(id);
         }
 
+        public void Update(Customer customer) 
+        {
+            _CustomerRepository.Update(customer);  
+        }
+
         public int addTwo(int input) {
             return input + 2;
         } 

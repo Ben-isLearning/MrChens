@@ -52,5 +52,13 @@ namespace MrChens.Controllers
             _CustomerHandler.Delete(id);
             return "Customer Deleted";
         }
+
+        [HttpPut]
+        [Route("UpdateCustomer")]
+        public string PutCustomer(Customer customer) 
+        {
+            _CustomerHandler.Update(customer);
+            return "Customer Updated";
+        }
     }
 }
