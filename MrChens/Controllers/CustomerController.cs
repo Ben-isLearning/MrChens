@@ -36,5 +36,13 @@ namespace MrChens.Controllers
             var result = _CustomerHandler.GetById(id);
             return result;
         }
+
+        [HttpGet]
+        [Route("GetCustomers")]
+        public IEnumerable<Customer> GetAll() 
+        {
+            var result = _CustomerHandler.GetAll();
+            return result;
+        }
     }
 }

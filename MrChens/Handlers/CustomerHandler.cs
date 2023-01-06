@@ -23,6 +23,12 @@ namespace MrChens.Handlers
 
         }
 
+        public IEnumerable<Customer> GetAll() 
+        {
+            var result = _CustomerRepository.GetAll();
+            return result;
+        }
+
         public int addTwo(int input) {
             return input + 2;
         } 

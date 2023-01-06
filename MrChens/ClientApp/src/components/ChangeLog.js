@@ -89,11 +89,21 @@ export class ChangeLog extends Component {
                     </tr>
                     <tr>
                         <td>0.7</td>
-                        <td>Added Single API Call <br />
-                        Create; Able to Add a record to the Customers Table.  <br />
+                        <td>Added Single API Call ~ AddCustomer <br />
+                                Create; Able to Add a record to the Customers Table.  <br />
+                                Route: localhost:44471/Customer/AddCustomer <br />
                         </td>
                         <td></td>
-                    </tr>                       
+                        </tr>           
+                    <tr>
+                        <td>0.7</td>
+                        <td>Added Single API Call ~ GetCustomerById <br />
+                                Get; Able to get a single record from the Customers Table dependant on id.  <br />
+                                Route: localhost:44471/Customer/GetCustomerById/1008  <br />
+                                Shows the JSON structure for "Mrs Chen"
+                        </td>
+                        <td>06/01/2023</td>
+                    </tr>    
 
                     </tbody>
 

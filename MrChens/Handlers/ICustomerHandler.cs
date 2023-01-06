@@ -6,6 +6,7 @@ namespace MrChens.Handlers
     {
         public void Add(Customer customer);
         public Customer GetById(int id);
+        public IEnumerable<Customer> GetAll();  
 
         public int addTwo(int input);
 
