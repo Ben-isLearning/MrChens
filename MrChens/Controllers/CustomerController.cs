@@ -24,9 +24,15 @@ namespace MrChens.Controllers
         [HttpPost]
         public string AddCustomer(Customer customer)
         {
-
             _CustomerHandler.Add(customer);
             return "Hello I Work";
+        }
+
+        [HttpGet]
+        public Customer GetCustomerById(int id)
+        {
+            var result = _CustomerHandler.GetById(id);
+            return result;
         }
     }
 }

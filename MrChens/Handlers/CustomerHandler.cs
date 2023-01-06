@@ -16,6 +16,13 @@ namespace MrChens.Handlers
             _CustomerRepository.Add(customer);
         }
 
+        public Customer GetById(int id)
+        {
+            var result = _CustomerRepository.GetById(id);
+            return result;  
+
+        }
+
         public int addTwo(int input) {
             return input + 2;
         } 

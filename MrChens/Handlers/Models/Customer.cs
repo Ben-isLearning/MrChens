@@ -10,6 +10,11 @@
             DislikesDishId = dislikesDishId;
         }
 
+        public Customer()
+        {
+
+        }
+
         public int CustomerId { get; set; }
         public string Name { get; set; }
         public int LikesDishId { get; set; }
