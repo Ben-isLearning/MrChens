@@ -23,13 +23,14 @@ namespace MrChens.Handlers
             return result;
         }
 
-
-        public void Delete(int id)
+        public IEnumerable<Ingredient> GetAll()
         {
-            throw new NotImplementedException();
+            var result = _IngredientRepository.GetAll();
+            return result;
         }
 
-        public IEnumerable<Ingredient> GetAll()
+
+        public void Delete(int id)
         {
             throw new NotImplementedException();
         }

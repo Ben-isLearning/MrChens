@@ -34,5 +34,13 @@ namespace MrChens.Controllers
             var result = _IngredientHandler.GetById(id);
             return result;
         }
+
+        [HttpGet]
+        [Route("GetIngredients")]
+        public IEnumerable<Ingredient> GetAll()
+        {
+            var result = _IngredientHandler.GetAll();
+            return result; 
+        }
     }
 }

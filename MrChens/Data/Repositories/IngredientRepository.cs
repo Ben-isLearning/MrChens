@@ -34,16 +34,32 @@ namespace MrChens.Data.Repositories
             return new Handlers.Models.Ingredient();
         }
 
+        public IEnumerable<Handlers.Models.Ingredient> GetAll()
+        {
+            var dbIngredientList = _MrChensContext.Ingredients.ToList();
+
+            var ingredientList = new List<Handlers.Models.Ingredient>();
+
+            foreach (var dbIngredient in dbIngredientList)
+            {
+                var ingredient = new Handlers.Models.Ingredient()
+                {
+                    IngredientId = dbIngredient.IngredientId,
+                    Name = dbIngredient.Name,
+                    Quantity = dbIngredient.Quantity,
+                }; 
+
+                ingredientList.Add(ingredient);
+            }
+
+            return ingredientList;
+        }
 
         public void Delete(int Id)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Handlers.Models.Ingredient> GetAll()
-        {
-            throw new NotImplementedException();
-        }
 
         public void Update(Handlers.Models.Ingredient Ingredient)
         {
