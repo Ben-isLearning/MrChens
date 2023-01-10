@@ -17,17 +17,19 @@ namespace MrChens.Handlers
             _IngredientRepository.Add(ingredient);
         }
 
+        public Ingredient GetById(int id)
+        {
+            var result = _IngredientRepository.GetById(id);
+            return result;
+        }
+
+
         public void Delete(int id)
         {
             throw new NotImplementedException();
         }
 
         public IEnumerable<Ingredient> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Ingredient GetById(int id)
         {
             throw new NotImplementedException();
         }

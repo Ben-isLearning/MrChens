@@ -12,7 +12,7 @@
             }; 
         }
 
-        public static Handlers.Models.Ingredient Convet(Data.Models.Ingredient ingredient)
+        public static Handlers.Models.Ingredient Convert(Data.Models.Ingredient ingredient)
         {
             return new Handlers.Models.Ingredient()
             {

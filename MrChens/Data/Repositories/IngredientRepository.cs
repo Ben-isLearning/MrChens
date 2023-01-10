@@ -20,6 +20,20 @@ namespace MrChens.Data.Repositories
             _MrChensContext.Ingredients.Add(dbIngredient);
             _MrChensContext.SaveChanges();
         }
+        public Handlers.Models.Ingredient GetById(int Id)
+        {
+            //FirstOrDefault loops through all entries in Table - Finds First Entry that matches or the Default Entry that matches
+            var dbIngredient = _MrChensContext.Ingredients.FirstOrDefault(x => x.IngredientId == Id);
+
+            if (dbIngredient != null)
+            {
+                var ingredient = IngredientConverter.Convert(dbIngredient);
+
+                return ingredient;
+            }
+            return new Handlers.Models.Ingredient();
+        }
+
 
         public void Delete(int Id)
         {
@@ -27,11 +41,6 @@ namespace MrChens.Data.Repositories
         }
 
         public IEnumerable<Handlers.Models.Ingredient> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Handlers.Models.Ingredient GetById(int Id)
         {
             throw new NotImplementedException();
         }

@@ -28,9 +28,11 @@ namespace MrChens.Controllers
         }
 
         [HttpGet]
-        public string GetIngredient()
+        [Route("GetIngredientById/{id}")]
+        public Ingredient GetIngredientById(int id)
         {
-            return "Hello World";
+            var result = _IngredientHandler.GetById(id);
+            return result;
         }
     }
 }
