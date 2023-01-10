@@ -50,5 +50,13 @@ namespace MrChens.Controllers
             _IngredientHandler.Delete(id);
             return "Ingredient Deleted";
         }
+
+        [HttpPut]
+        [Route("UpdateIngredient")]
+        public string PutIngredient(Ingredient ingredient)
+        { 
+        _IngredientHandler.Update(ingredient);
+            return "Ingredient Updated";
+        }
     }
 }

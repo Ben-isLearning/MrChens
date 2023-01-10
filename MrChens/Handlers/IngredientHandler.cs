@@ -35,9 +35,9 @@ namespace MrChens.Handlers
             _IngredientRepository.Delete(id);
         }
 
-        public void Update(Ingredient Ingredient)
+        public void Update(Ingredient ingredient)
         {
-            throw new NotImplementedException();
+            _IngredientRepository.Update(ingredient);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using MrChens.Data.ORM.Context;
 using MrChens.Data.Repositories.Converters;
+using System.Data.Entity.Migrations;
 
 namespace MrChens.Data.Repositories
 {
@@ -66,7 +67,9 @@ namespace MrChens.Data.Repositories
 
         public void Update(Handlers.Models.Ingredient Ingredient)
         {
-            throw new NotImplementedException();
+          var dbIngredient = IngredientConverter.Convert(Ingredient);
+            _MrChensContext.Ingredients.AddOrUpdate(dbIngredient);
+            _MrChensContext.SaveChanges();
         }
     }
 }
