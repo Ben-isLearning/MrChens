@@ -192,10 +192,10 @@ export class ChangeLog extends Component {
                             <td></td>
                         </tr>
                         <tr>
-                            <td>0.16</td>
-                            <td>Added Single API Call ~ DeleteIngredient<br></br>
-                                Get; Able to delete a single record from the Ingredients Table dependant on id.  <br></br>
-                                Route: localhost:44471/Ingredients/DeleteIngredientById/1 <br />
+                            <td>0.17</td>
+                            <td>Added Single API Call ~ PutIngredient<br></br>
+                                Get; Able to update a single record from the Ingredients Table.  <br></br>
+                                Route: localhost:44471/Ingredients/UpdateIngredient <br />
 
                             </td>
                             <td></td>
