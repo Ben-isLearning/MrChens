@@ -29,5 +29,12 @@ namespace MrChens.Controllers
             })
             .ToArray();
         }
+
+        [HttpPost]
+        [Route("Test")]
+        public string Test()
+        {
+            return "Hello World";
+        }
     }
 }

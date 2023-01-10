@@ -6,9 +6,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IMrChensContext, MrChensContext>();
+
 builder.Services.AddScoped<ICustomerHandler, CustomerHandler>();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
-builder.Services.AddScoped<IMrChensContext, MrChensContext>();
+
+builder.Services.AddScoped<IIngredientHandler, IngredientHandler>();
+builder.Services.AddScoped<IIngredientRepository, IngredientRepository>();
 
 // Add Swagger Gen
 builder.Services.AddEndpointsApiExplorer();

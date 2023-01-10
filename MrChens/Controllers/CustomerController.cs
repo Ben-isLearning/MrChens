@@ -19,8 +19,6 @@ namespace MrChens.Controllers
         }
 
 
-
-
         [HttpPost]
         [Route("AddCustomer")]
         public string AddCustomer(Customer customer)

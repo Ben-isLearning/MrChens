@@ -1,7 +1,5 @@
-﻿using MrChens.Data.Models;
-using MrChens.Data.ORM.Context;
+﻿using MrChens.Data.ORM.Context;
 using MrChens.Data.Repositories.Converters;
-using MrChens.Handlers.Models;
 using System.Data.Entity.Migrations;
 
 namespace MrChens.Data.Repositories

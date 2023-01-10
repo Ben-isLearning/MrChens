@@ -1,5 +1,5 @@
 ﻿using MrChens.Data.ORM.Context;
-using MrChens.Handlers.Models;
+using MrChens.Data.Repositories.Converters;
 
 namespace MrChens.Data.Repositories
 {
@@ -12,9 +12,13 @@ namespace MrChens.Data.Repositories
         {
             _MrChensContext = mrChenscontext;
         }
-        public void Add(Ingredient Ingredient)
+
+        public void Add(Handlers.Models.Ingredient ingredient)
         {
-            throw new NotImplementedException();
+            var dbIngredient = IngredientConverter.Convert(ingredient);
+
+            _MrChensContext.Ingredients.Add(dbIngredient);
+            _MrChensContext.SaveChanges();
         }
 
         public void Delete(int Id)
@@ -22,17 +26,17 @@ namespace MrChens.Data.Repositories
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Ingredient> GetAll()
+        public IEnumerable<Handlers.Models.Ingredient> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public Ingredient GetById(int Id)
+        public Handlers.Models.Ingredient GetById(int Id)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Ingredient Ingredient)
+        public void Update(Handlers.Models.Ingredient Ingredient)
         {
             throw new NotImplementedException();
         }

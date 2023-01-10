@@ -12,9 +12,9 @@ namespace MrChens.Handlers
             _IngredientRepository = ingredientRepository;
         }
 
-        public void Add(Ingredient Ingredient)
+        public void Add(Ingredient ingredient)
         {
-            throw new NotImplementedException();
+            _IngredientRepository.Add(ingredient);
         }
 
         public void Delete(int id)

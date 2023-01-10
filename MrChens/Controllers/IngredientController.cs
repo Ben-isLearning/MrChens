@@ -19,5 +19,18 @@ namespace MrChens.Controllers
             _IngredientHandler = ingredientHandler;
         }
 
+        [HttpPost]
+        [Route("AddIngredient")]
+        public string AddIngredient(Ingredient ingredient)
+        {
+            _IngredientHandler.Add(ingredient);
+            return "Ingredient Added";
+        }
+
+        [HttpGet]
+        public string GetIngredient()
+        {
+            return "Hello World";
+        }
     }
 }
