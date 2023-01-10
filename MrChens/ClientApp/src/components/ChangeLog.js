@@ -18,7 +18,7 @@ export class ChangeLog extends Component {
     render() {
         return (
             <div>
-                <h1>Change Log ~ Version: 0.14 </h1>
+                <h1>Change Log ~ Version: 0.16 </h1>
                 <br></br>
                 <p>This change log follows the journey of "Mr Chen" as he stumbles into the buisness of running a Ramen shop. <br />
                     I will be commenting the process of implementing "Mr Chen's" wacky ideas and buisness improvements. </p>
@@ -171,8 +171,27 @@ export class ChangeLog extends Component {
                                 Route: localhost:44471/Ingredients/GetIngredientById/1 <br />
 
                             </td>
-                            <td>10/01/2023</td>
+                            <td></td>
                         </tr>
+                        <tr>
+                            <td>0.15</td>
+                            <td>Added Single API Call ~ GetAll<br></br>
+                                Get; Able to get all single records from the Ingredients Table <br></br>
+                                Route: localhost:44471/Ingredients/GetIngredients <br />
+
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>0.16</td>
+                            <td>Added Single API Call ~ DeleteIngredient<br></br>
+                                Get; Able to delete a single record from the Ingredients Table dependant on id.  <br></br>
+                                Route: localhost:44471/Ingredients/DeleteIngredientById/1 <br />
+
+                            </td>
+                            <td></td>
+                        </tr>
+
 
                     </tbody>
 

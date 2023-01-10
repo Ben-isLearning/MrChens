@@ -32,7 +32,7 @@ namespace MrChens.Handlers
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            _IngredientRepository.Delete(id);
         }
 
         public void Update(Ingredient Ingredient)

@@ -55,9 +55,12 @@ namespace MrChens.Data.Repositories
             return ingredientList;
         }
 
-        public void Delete(int Id)
+        public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var ingredient = _MrChensContext.Ingredients.Single(c => c.IngredientId == id);
+            _MrChensContext.Ingredients.Remove(ingredient);
+            _MrChensContext.SaveChanges();
+    
         }
 
 

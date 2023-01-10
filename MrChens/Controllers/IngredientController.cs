@@ -42,5 +42,13 @@ namespace MrChens.Controllers
             var result = _IngredientHandler.GetAll();
             return result; 
         }
+
+        [HttpDelete]
+        [Route("DeleteIngredientById/{id}")]
+        public string DeleteIngredient(int id)
+        {
+            _IngredientHandler.Delete(id);
+            return "Ingredient Deleted";
+        }
     }
 }
