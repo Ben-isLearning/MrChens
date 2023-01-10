@@ -18,7 +18,7 @@ export class ChangeLog extends Component {
     render() {
         return (
             <div>
-                <h1>Change Log ~ Version: 0.12 </h1>
+                <h1>Change Log ~ Version: 0.13 </h1>
                 <br></br>
                 <p>This change log follows the journey of "Mr Chen" as he stumbles into the buisness of running a Ramen shop. <br />
                     I will be commenting the process of implementing "Mr Chen's" wacky ideas and buisness improvements. </p>
@@ -151,6 +151,18 @@ export class ChangeLog extends Component {
                                 D - Each Class only depends on a interface, rather than a class. <br></br>
                             </td>
                             <td></td>
+                        </tr>
+                        <tr>
+                            <td>0.11</td>
+                            <td>Fixed second Endpoint <br></br>
+                                Ran into a few issues with the second endpoint. <br></br>
+                                I forgot to register the Handler and the Repository with the main Program.cs <br></br>
+                                I also forgot to register the new route in the setupProxy.js <br></br>
+                                We are now able to Add a single record of the Ingredients Table <br />
+                                Route: localhost:44471/Ingredients/AddIngredient <br />
+
+                            </td>
+                            <td>10/01/2023</td>
                         </tr>
 
                     </tbody>
